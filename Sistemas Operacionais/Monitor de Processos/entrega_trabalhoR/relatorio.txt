@@ -1,0 +1,46 @@
+
+Relatorio do Projeto – Monitor de Processos em C
+Disciplina: Sistemas Operacionais
+Aluno: Rian Costa Silva dos Santos
+Data: 14 de julho de 2025
+
+1. Introducao
+Este projeto tem como objetivo desenvolver um programa em linguagem C capaz de monitorar os processos em execucao no sistema operacional Windows.
+A proposta foca no uso direto de chamadas ao sistema (system calls) e na API do Windows para gerenciar e obter informacoes de processos.
+Alem disso, o programa deve permitir a interacao com o usuario para finalizar processos especificos.
+
+2. Chamadas ao Sistema
+As chamadas ao sistema (system calls) sao a interface entre o programa do usuario e o kernel do sistema operacional.
+No Windows, acessamos essas chamadas por meio da API do Windows, que fornece funcoes para gerenciamento de processos, arquivos e memoria.
+
+3. Funcoes da API do Windows Utilizadas
+- CreateToolhelp32Snapshot
+- Process32First / Process32Next
+- OpenProcess
+- GetProcessMemoryInfo
+- GetProcessTimes / GetSystemTimes
+- TerminateProcess
+- GetSystemInfo / Sleep
+
+4. Funcionalidades do Programa
+1. Lista todos os processos com PID, nome, memoria usada e uso de CPU (%)
+2. Permite encerrar um processo informando o PID
+3. Exibe menu interativo no terminal
+
+5. Dificuldades e Aprendizado
+O principal desafio foi o calculo do uso de CPU. A coleta de amostras com diferenca de tempo e o uso da funcao GetSystemTimes exigiram tratamento especial
+para garantir que os dados estivessem corretos. Tambem foi necessario lidar com permissoes ao acessar processos do sistema.
+
+6. Capturas de Tela
+- Menu principal: [arquivo opcao_1_menu.png]
+- Listagem de processos: [arquivo opcao_1_lista.png]
+- Encerramento de processo: [arquivo opcao_2_encerramento.png]
+
+7. Conclusao
+O projeto permitiu compreender como a API do Windows pode ser usada para interagir com processos e como chamadas ao sistema funcionam na pratica.
+Foi possivel listar, monitorar e finalizar processos diretamente pelo terminal, cumprindo todos os requisitos propostos.
+
+Itens Entregues:
+- Codigo-fonte comentado com tempos do audio
+- Audio explicativo
+- Relatorio
